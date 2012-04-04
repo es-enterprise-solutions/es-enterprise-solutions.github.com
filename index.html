@@ -4,10 +4,7 @@
 	<title>ES Enterprise Solutions GmbH</title>
 	<meta charset="utf-8" />
 	<meta name="generator" content="BBEdit 10.1" />
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script src="js/tooltipsy.min.js" type="text/javascript"></script>
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
-</head>
 <style>
 	html, body {
 		height: 100%;
@@ -23,11 +20,6 @@
 		text-align: center;
 		}
 	body {
-		background-image: url('./img/enterprise-solutions-bg-world.png'); 
-		background-image: url('./img/enterprise-solutions-bg-world.png'); 
-		background-image: url('./img/enterprise-solutions-bg-world.png'); 
-		background-image: url('./img/enterprise-solutions-bg-world.png'); 
-		background-image: url('./img/enterprise-solutions-bg-world.png'); 
 		background-image: url('./img/enterprise-solutions-bg-world.png'); 
 		background-position: 50% 5%;
 		background-repeat: no-repeat;
@@ -67,6 +59,7 @@
 		width: 100%;
 		position: absolute;
 		text-align: center;
+		text-transform: uppercase;
 		top: 60%;
 		}
 
@@ -162,10 +155,11 @@
 }
 		
 </style>
+</head>
 
 <body>
 	<h1>ES Enterprise Solutions</h1>
-	<p id="claim">ES BEDARF KEINES CLAIMS.</p>
+	<p id="claim">ES bedarf keines Claims.</p>
 	<nav>
 		<ul>
 			<li class="bubblemail" onclick="$('.bubblecard').data('tooltipsy').hide();$('.bubbletel').data('tooltipsy').hide();">Senden Sie uns eine E-Mail: info@es-enterprise-solutions.de</li>
@@ -177,6 +171,8 @@
 		<p><a href="#impressum" class="bubbleimpressum">Impressum</a></p>
 	</footer>
 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/tooltipsy.min.js"></script>
 	<script>
 		$('.bubblemail').tooltipsy({
 			content: '<a href="mailto:info@es-enterprise-solutions.de">E-Mail senden</a>',
