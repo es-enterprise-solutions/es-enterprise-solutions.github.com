@@ -20,17 +20,18 @@
 		text-align: center;
 		}
 	body {
-		background-image: url('./img/enterprise-solutions-bg-world.png'); 
+		background-image: url('img/globe.svg'); 
 		background-position: 50% 5%;
 		background-repeat: no-repeat;
-		-webkit-background-size: 92%;
-		-moz-background-size: 92%;
-		background-size: 92%;
+		-webkit-background-size: 80%;
+		-moz-background-size: 80%;
+		background-size: 80%;
 		color: #001337;
 		font-family: sans-serif;
 		max-width: 800px;
 		margin: 0 auto;
 		position: relative;
+		min-height: 210px;
 	}
 	a, a:link, a:visited {
 		color: #001337;
@@ -42,7 +43,7 @@
 		color: rgb(201, 0, 0);
 		}
 	h1 {
-		background: transparent url('./img/ES-Enterprise-Solutions-Logo.png') no-repeat 50% 5%;
+		background: transparent url('img/ES-Enterprise-Solutions-Logo.png') no-repeat 50% 5%;
 		background-size: contain;
 		text-indent: 100%;
 		white-space: nowrap;
@@ -91,6 +92,12 @@
 		white-space: nowrap;
 		cursor: pointer;
 		}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    li {
+        background-image: url('img/icons_high.png');
+        background-size: 65px 135px;
+        }
+}		
 
 	li.bubblecard {
 		background-position: 0 0;
@@ -122,7 +129,7 @@
 		-moz-box-shadow:  0 -5px 8px rgba(102, 102, 102, .300);
 	}
 
-@media only screen and (min-height: 321px) {
+@media  screen and (min-height: 321px) {
 	ul {
 		bottom: 7%;
 		width: 100%;
@@ -135,7 +142,7 @@
 		}
 }
 
-@media only screen and (max-height: 320px) {
+@media  screen and (max-height: 320px) {
 
 	ul {
 		right: 10%;
@@ -144,16 +151,22 @@
 	li.bubbletel {
 		margin: 10px 0;
 		}
-
 }
 
-@media only screen and (max-height: 250px) {
+@media  screen and (max-height: 275px) {
 
 	#claim {
 		display: none;
 		}
 }
-		
+
+@media  screen and (max-height: 250px) {
+
+	#claim {
+		display: none;
+		}
+}
+
 </style>
 </head>
 
@@ -171,7 +184,7 @@
 		<p><a href="#impressum" class="bubbleimpressum">Impressum</a></p>
 	</footer>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="js/tooltipsy.min.js"></script>
 	<script>
 		$('.bubblemail').tooltipsy({
