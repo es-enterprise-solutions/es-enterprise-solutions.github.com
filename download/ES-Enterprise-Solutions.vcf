@@ -1,17 +1,13 @@
 BEGIN:VCARD
 VERSION:3.0
-PRODID:-//Apple Inc.//Address Book 6.1//EN
 N:;;;;
-FN:Es Enterprise Solutions GmbH
-ORG:Es Enterprise Solutions GmbH;
-EMAIL;type=INTERNET;type=HOME;type=pref:info@es-enterprise-solutions.de
+FN:ES Enterprise Solutions GmbH
+ORG:ES Enterprise Solutions GmbH;
+EMAIL;type=INTERNET;type=WORK;type=pref:info@es-enterprise-solutions.de
 TEL;type=MAIN;type=pref:+49 2236 48010-444
-item1.ADR;type=HOME;type=pref:;;Wesselinger Str. 22-30;Köln;;50999;Deutschland
+item1.ADR;type=WORK;type=pref:;;Wesselinger Straße 22-30;Köln;;50999;Deutschland
 item1.X-ABADR:de
-item2.URL;type=pref:http://es-enterprise-solutions.de
+item2.URL;type=pref:http://es-enterprise-solutions.de/
 item2.X-ABLabel:_$!<HomePage>!$_
 X-ABShowAs:COMPANY
-CATEGORIES:card
-UID:efa25c5f-10f0-4b61-8698-123b0dc79842
-X-ABUID:9D0AF84A-632E-4EF3-9362-C2A62E673818:ABPerson
 END:VCARD
