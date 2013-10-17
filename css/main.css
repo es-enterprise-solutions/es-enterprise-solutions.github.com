@@ -347,11 +347,14 @@ footer p {
 	}
 
 	footer a:link ,
-	footer a:visited ,
+	footer a:visited {
+		text-decoration: underline;
+	}
+
 	footer a:hover ,
 	footer a:focus ,
 	footer a:active {
-		text-decoration: underline;
+		text-decoration: none;
 	}
 
 }
