@@ -1,13 +1,18 @@
 BEGIN:VCARD
 VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.8.2//EN
+PROFILE:VCARD
+LANG:de-DE
+TZ:+0100
 N:;;;;
 FN:ES Enterprise Solutions GmbH
 ORG:ES Enterprise Solutions GmbH;
 EMAIL;type=INTERNET;type=WORK;type=pref:info@es-enterprise-solutions.de
-TEL;type=MAIN;type=pref:+49 2236 48010-444
-item1.ADR;type=WORK;type=pref:;;Wesselinger Straße 22-30;Köln;;50999;Deutschland
-item1.X-ABADR:de
-item2.URL;type=pref:http://es-enterprise-solutions.de/
-item2.X-ABLabel:_$!<HomePage>!$_
+TEL;type=WORK;type=VOICE;type=pref:+49 2236 48010-444
+ADR;type=WORK:;;Wesselinger Straße 22-30;Köln;Nordrhein-Westfalen;50999;Deutschland
+X-ABADR:de
 X-ABShowAs:COMPANY
+URL;type=WORK:http://es-enterprise-solutions.de/
+X-SOCIALPROFILE;type=facebook:https://www.facebook.com/es.enterprise.solutions
+X-MOZILLA-HTML:FALSE
 END:VCARD

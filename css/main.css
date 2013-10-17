@@ -1,0 +1,357 @@
+/**
+ * ES Style
+ *
+ * @author     Marc Görtz <mgoertz@es-enterprise-solutions.de>
+ * @copyright  Copyright (c) 2011-2013 ES Enterprise Solutions GmbH <info@es-enterprise-solutions.de>
+ * @license    MIT License
+ * @media      all
+ */
+
+html {
+	color: #fff;
+	background: #001337;
+	font: 21px/30px 'ff-tisa-sans-web-pro', sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 30px 0 0;
+	color: #001337;
+	background: #fff;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+	border: 0 none;
+}
+
+abbr {
+	border-bottom: 0 none;
+}
+
+.wrapper {
+	position: relative;
+	margin: 0 auto;
+	padding: 0 0 0 20px;
+	max-width: 880px;
+}
+
+[role=main] {
+	display: block;
+}
+
+[role=main] h1 {
+	margin: 0 0 40px;
+}
+
+[role=main] h2 {
+	margin: 0 0 -235px;
+	font-size: 24px;
+}
+
+[role=main] h3 {
+	margin: 40px 0 15px;
+	font: 21px/30px 'ff-tisa-sans-web-pro', sans-serif;
+}
+
+[role=main] p {
+	margin: 0;
+	padding: 245px 220px 0 0;
+	border-right: 1px solid #b2b8c3;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+[role=main] ul {
+	margin: 0 0 30px;
+	padding: 0;
+	list-style: none;
+}
+
+[role=main] ul li {
+	width: 25%;
+	margin: 0;
+	padding: 0 20px 0 0;
+	list-style: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+[role=main] ul li ,
+[role=main] ul img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+nav {
+	position: absolute;
+	top: -2px;
+	right: 0;
+	min-width: 520px;
+	padding: 4px 0 0;
+	border-top: 1px solid #b2b8c3;
+	overflow: hidden;
+}
+
+nav h2 {
+	float: left;
+	margin: 0;
+	padding: 0 10px 0 0;
+	font: bold 21px/30px 'ff-tisa-sans-web-pro', sans-serif;
+}
+
+nav h2:after {
+	content: ':';
+}
+
+nav ul {
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li {
+	float: left;
+	margin: 0;
+	padding: 0 0 0 29px;
+}
+
+nav ul li:first-child {
+	padding: 0;
+}
+
+nav i {
+	display: inline-block;
+	width: 26px;
+	height: 16px;
+	color: #fff;
+	background: transparent url(../img/icons.png) no-repeat 0 -42px;
+	text-indent: -1000em;
+	direction: ltr;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+nav .mail i {
+	background-position: 0 -42px;
+}
+
+nav .mail.active a {
+	width: 14.5em;
+}
+
+nav .download i {
+	background-position: 0 -58px;
+}
+
+nav .download.active a {
+	width: 5.5em;
+}
+
+nav .phone i {
+	background-position: 0 -74px;
+}
+
+nav .phone.active a {
+	width: 9.5em;
+}
+
+nav a:link ,
+nav a:visited ,
+nav a:hover ,
+nav a:focus ,
+nav a:active {
+	display: inline-block;
+	width: 1px;
+	height: 30px;
+	color: #001337;
+	background: transparent;
+	font-size: 18px;
+	vertical-align: middle;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-transition: width .4s ease;
+	-moz-transition: width .4s ease;
+	-ms-transition: width .4s ease;
+	-o-transition: width .4s ease;
+	transition: width .4s ease;
+}
+
+nav a:link ,
+nav a:visited {
+	text-decoration: underline;
+}
+
+nav a:hover ,
+nav a:focus ,
+nav a:active {
+	text-decoration: none;
+}
+
+footer {
+	position: relative;
+	display: block;
+	padding: 25px 0;
+	min-height: 245px;
+	font: 16px/1.25 'ff-tisa-sans-web-pro', sans-serif;
+	color: #fff;
+	background: #001337 url(../img/icons.png) no-repeat 50% -90px;
+}
+
+footer .wrapper {
+	padding: 0 0 0 80px;
+	max-width: 820px;
+}
+
+footer a:link ,
+footer a:visited {
+	color: #fff;
+	background: transparent;
+	text-decoration: none;
+}
+
+footer a:hover ,
+footer a:focus ,
+footer a:active {
+	color: #fff;
+	background: transparent;
+	text-decoration: underline;
+}
+
+footer h2 {
+	margin: 0;
+	font-size: 1em;
+}
+
+footer h2:before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: 20px;
+	width: 42px;
+	height: 42px;
+	color: #fff;
+	background: transparent url(../img/icons.png) no-repeat 0 0;
+}
+
+footer h2:after {
+	content: ':';
+}
+
+footer p {
+	margin: 0 0 5px;
+}
+
+@media (max-width: 850px) {
+
+	[role=main] p {
+		padding-right: 100px;
+	}
+
+}
+
+@media (max-width: 745px) {
+
+	body {
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	.wrapper {
+		padding: 0 12px;
+	}
+
+	[role=main] h1 {
+		text-align: center;
+	}
+
+	[role=main] h2 {
+		line-height: 30px;
+	}
+
+	[role=main] h3 {
+		font-weight: bold;
+	}
+
+	[role=main] p {
+		border: 0 none;
+		padding-right: 0;
+	}
+
+	[role=main] ul {
+		margin: 0;
+	}
+
+	[role=main] ul li {
+		width: 50%;
+		padding: 0 10px 30px;
+	}
+
+	nav {
+		position: static;
+		top: auto;
+		right: auto;
+		min-width: 0;
+		padding: 0;
+		border-top: 0 none;
+	}
+
+	nav h2 {
+		float: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	nav ul {
+		float: none;
+		margin: 0 0 30px;
+		overflow: hidden;
+	}
+
+	nav ul li {
+		float: none;
+		padding: 0;
+	}
+
+	nav a:link ,
+	nav a:visited ,
+	nav a:hover ,
+	nav a:focus ,
+	nav a:active {
+		width: auto;
+	}
+
+	footer {
+		min-height: 205px;
+	}
+
+	footer .wrapper {
+		padding: 0 12px 0 40px;
+	}
+
+	footer h2:before {
+		content: '';
+		position: absolute;
+		top: -2px;
+		left: 12px;
+		width: 21px;
+		height: 21px;
+		color: #fff;
+		background: transparent url(../img/icons.png) no-repeat 0 0;
+		background-size: 350px 162.5px;
+	}
+
+	footer a:link ,
+	footer a:visited ,
+	footer a:hover ,
+	footer a:focus ,
+	footer a:active {
+		text-decoration: underline;
+	}
+
+}
