@@ -161,11 +161,27 @@ nav .phone.active a {
 	width: 9.5em;
 }
 
+nav a:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 100%;
+	color: #001337;
+	background: #fff;
+}
+
+nav .active a:before {
+	display: none;
+}
+
 nav a:link ,
 nav a:visited ,
 nav a:hover ,
 nav a:focus ,
 nav a:active {
+	position: relative;
 	display: inline-block;
 	width: 1px;
 	height: 30px;
