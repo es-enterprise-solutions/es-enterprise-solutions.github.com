@@ -34,25 +34,29 @@ abbr {
 .wrapper {
 	position: relative;
 	margin: 0 auto;
-	padding: 0 0 0 20px;
+	padding: 0 20px;
 	max-width: 880px;
 }
 
-[role=main] h1 {
+main {
+	display: block;
+}
+
+main h1 {
 	margin: 0 0 40px;
 }
 
-[role=main] h2 {
+main h2 {
 	margin: 0 0 15px;
 	font-size: 24px;
 }
 
-[role=main] h3 {
+main h3 {
 	margin: 40px 0 15px;
 	font: 21px/30px 'ff-tisa-sans-web-pro', sans-serif;
 }
 
-[role=main] p {
+main p {
 	margin: 0;
 	-webkit-hyphens: auto;
 	-epub-hyphens: auto;
@@ -60,13 +64,14 @@ abbr {
 	hyphens: auto;
 }
 
-[role=main] ul {
+main #portfolio ul {
 	margin: 0 0 30px;
 	padding: 0;
 	list-style: none;
+	overflow: hidden;
 }
 
-[role=main] ul li {
+main #portfolio li {
 	width: 25%;
 	margin: 0;
 	padding: 0 10px;
@@ -77,27 +82,26 @@ abbr {
 	box-sizing: border-box;
 }
 
-[role=main] ul li:first-child {
+main #portfolio li:first-child {
 	padding: 0 10px 0 0;
 	text-align: left;
 }
 
-[role=main] ul li:last-child {
+main #portfolio li:last-child {
 	padding: 0 0 0 10px;
 	text-align: right;
 }
 
-[role=main] ul li ,
-[role=main] ul img {
+main #portfolio li ,
+main #portfolio img {
 	display: inline-block;
 	vertical-align: middle;
 }
 
 nav {
 	position: absolute;
-	top: -2px;
-	right: 0;
-	min-width: 520px;
+	top: 0;
+	right: 20px;
 	overflow: hidden;
 }
 
@@ -267,83 +271,73 @@ footer p {
 	margin: 0 0 5px;
 }
 
-@media (max-width: 850px) {
-
-	[role=main] p {
-		padding-right: 100px;
-	}
-
-}
-
 @media (max-width: 745px) {
 
 	body {
+		padding: 0;
 		font-size: 18px;
 		line-height: 26px;
 	}
 
 	.wrapper {
-		padding: 0 12px;
+		padding: 60px 12px 0;
 	}
 
-	[role=main] h1 {
+	main h1 {
 		text-align: center;
 	}
 
-	[role=main] h2 {
+	main h2 {
 		line-height: 30px;
 	}
 
-	[role=main] h3 {
-		font-weight: bold;
-	}
-
-	[role=main] p {
-		border: 0 none;
-		padding-right: 0;
-	}
-
-	[role=main] ul {
+	main #portfolio ul {
 		margin: 0;
 	}
 
-	[role=main] ul li {
+	main #portfolio li {
 		width: 50%;
 		padding: 0 10px 30px;
 	}
 
+	main #portfolio li:first-child ,
+	main #portfolio li:last-child {
+		padding: 0 10px 30px;
+		text-align: center;
+	}
+
 	nav {
-		position: static;
-		top: auto;
-		right: auto;
-		min-width: 0;
-		padding: 0;
-		border-top: 0 none;
+		position: fixed;
+		left: 0;
+		right: 0;
+		padding: 10px 12px 0;
+		border-bottom: 1px solid #b2b8c3;
+		text-align: center;
+		color: #001337;
+		background: #fff;
+		box-shadow: 0 10px 20px #fff;
 	}
 
 	nav h2 {
-		float: none;
-		margin: 0;
-		padding: 0;
+		display: none;
 	}
 
 	nav ul {
 		float: none;
-		margin: 0 0 30px;
-		overflow: hidden;
 	}
 
 	nav ul li {
 		float: none;
-		padding: 0;
+		display: inline-block;
+		text-align: left;
 	}
 
-	nav a:link ,
-	nav a:visited ,
-	nav a:hover ,
-	nav a:focus ,
-	nav a:active {
-		width: auto;
+	nav .mail.active a {
+		width: 6.5em;
+	}
+
+	nav .phone.active a {
+		width: 4em;
 	}
 
 	footer {
