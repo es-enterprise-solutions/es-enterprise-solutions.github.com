@@ -47,7 +47,7 @@ abbr {
 }
 
 [role=main] h2 {
-	margin: 0 0 -235px;
+	margin: 0 0 15px;
 	font-size: 24px;
 }
 
@@ -58,8 +58,6 @@ abbr {
 
 [role=main] p {
 	margin: 0;
-	padding: 245px 220px 0 0;
-	border-right: 1px solid #b2b8c3;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
@@ -92,8 +90,6 @@ nav {
 	top: -2px;
 	right: 0;
 	min-width: 520px;
-	padding: 4px 0 0;
-	border-top: 1px solid #b2b8c3;
 	overflow: hidden;
 }
 
