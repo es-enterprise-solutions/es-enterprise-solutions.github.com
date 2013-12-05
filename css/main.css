@@ -15,9 +15,16 @@ html {
 
 body {
 	margin: 0;
-	padding: 30px 0 0;
+	padding: 0;
 	color: #001337;
 	background: #fff;
+}
+
+.wrapper {
+	position: relative;
+	margin: 0 auto;
+	padding: 30px 20px;
+	max-width: 880px;
 }
 
 img {
@@ -31,47 +38,78 @@ abbr {
 	border-bottom: 0 none;
 }
 
-.wrapper {
-	position: relative;
-	margin: 0 auto;
-	padding: 0 20px;
-	max-width: 880px;
-}
-
-main {
-	display: block;
-}
-
-main h1 {
+h1 {
 	margin: 0 0 40px;
 }
 
-main h2 {
-	margin: 0 0 15px;
+h2 {
+	margin: 40px 0 15px;
 	font-size: 24px;
 }
 
-main h3 {
+h3 {
 	margin: 40px 0 15px;
 	font: 21px/30px 'ff-tisa-sans-web-pro', sans-serif;
 }
 
-main p {
-	margin: 0;
+p {
+	margin: 0 0 10px;
 	-webkit-hyphens: auto;
 	-epub-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
 }
 
-main #portfolio ul {
+ul {
+	margin: 0 0 15px;
+	padding: 0 0 0 20px;
+}
+
+ul li {
+	margin: 0 0 2px;
+}
+
+main {
+	display: block;
+}
+
+a:link ,
+a:visited ,
+a:hover ,
+a:focus ,
+a:active {
+	color: #001337;
+	background: transparent;
+	font-weight: bold;
+}
+
+a:link ,
+a:visited {
+	text-decoration: underline;
+}
+
+a:hover ,
+a:focus ,
+a:active {
+	text-decoration: none;
+}
+
+.job-intro em {
+	display: block;
+	margin: 2px 0 25px;
+	font-size: 24px;
+	font-weight: bold;
+	font-style: normal;
+}
+
+#portfolio ul {
 	margin: 0 0 30px;
 	padding: 0;
 	list-style: none;
 	overflow: hidden;
 }
 
-main #portfolio li {
+#portfolio li {
 	width: 25%;
 	margin: 0;
 	padding: 0 10px;
@@ -82,25 +120,25 @@ main #portfolio li {
 	box-sizing: border-box;
 }
 
-main #portfolio li:first-child {
+#portfolio li:first-child {
 	padding: 0 10px 0 0;
 	text-align: left;
 }
 
-main #portfolio li:last-child {
+#portfolio li:last-child {
 	padding: 0 0 0 10px;
 	text-align: right;
 }
 
-main #portfolio li ,
-main #portfolio img {
+#portfolio li ,
+#portfolio img {
 	display: inline-block;
 	vertical-align: middle;
 }
 
 nav {
 	position: absolute;
-	top: 0;
+	top: 30px;
 	right: 20px;
 	overflow: hidden;
 }
@@ -248,8 +286,9 @@ footer a:active {
 }
 
 footer h2 {
-	margin: 0;
+	margin: 0 0 5px;
 	font-size: 1em;
+	line-height: 21px;
 }
 
 footer h2:before {
@@ -274,40 +313,40 @@ footer p {
 @media (max-width: 745px) {
 
 	body {
-		padding: 0;
 		font-size: 18px;
 		line-height: 26px;
 	}
 
-	.wrapper {
-		padding: 60px 12px 0;
-	}
-
-	main h1 {
+	h1 {
 		text-align: center;
 	}
 
-	main h2 {
+	h2 {
 		line-height: 30px;
 	}
 
-	main #portfolio ul {
+	.wrapper {
+		padding: 60px 12px 20px;
+	}
+
+	#portfolio ul {
 		margin: 0;
 	}
 
-	main #portfolio li {
+	#portfolio li {
 		width: 50%;
 		padding: 0 10px 30px;
 	}
 
-	main #portfolio li:first-child ,
-	main #portfolio li:last-child {
+	#portfolio li:first-child ,
+	#portfolio li:last-child {
 		padding: 0 10px 30px;
 		text-align: center;
 	}
 
 	nav {
 		position: fixed;
+		top: 0;
 		left: 0;
 		right: 0;
 		padding: 10px 12px 0;
@@ -358,17 +397,6 @@ footer p {
 		color: #fff;
 		background: transparent url(../img/icons.png) no-repeat 0 0;
 		background-size: 350px 162.5px;
-	}
-
-	footer a:link ,
-	footer a:visited {
-		text-decoration: underline;
-	}
-
-	footer a:hover ,
-	footer a:focus ,
-	footer a:active {
-		text-decoration: none;
 	}
 
 }
