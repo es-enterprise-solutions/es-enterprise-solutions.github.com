@@ -69,11 +69,22 @@ abbr {
 [role=main] ul li {
 	width: 25%;
 	margin: 0;
-	padding: 0 20px 0 0;
+	padding: 0 10px;
 	list-style: none;
+	text-align: center;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+[role=main] ul li:first-child {
+	padding: 0 10px 0 0;
+	text-align: left;
+}
+
+[role=main] ul li:last-child {
+	padding: 0 0 0 10px;
+	text-align: right;
 }
 
 [role=main] ul li ,
