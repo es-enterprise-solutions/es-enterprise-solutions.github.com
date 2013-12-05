@@ -38,10 +38,6 @@ abbr {
 	max-width: 880px;
 }
 
-[role=main] {
-	display: block;
-}
-
 [role=main] h1 {
 	margin: 0 0 40px;
 }
@@ -59,6 +55,7 @@ abbr {
 [role=main] p {
 	margin: 0;
 	-webkit-hyphens: auto;
+	-epub-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
 }
