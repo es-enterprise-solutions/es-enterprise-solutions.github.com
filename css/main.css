@@ -190,7 +190,7 @@ nav .mail i {
 }
 
 nav .mail.active a {
-	width: 14.5em;
+	width: 275px;
 }
 
 nav .download i {
@@ -198,7 +198,7 @@ nav .download i {
 }
 
 nav .download.active a {
-	width: 5.5em;
+	width: 105px;
 }
 
 nav .phone i {
@@ -206,7 +206,7 @@ nav .phone i {
 }
 
 nav .phone.active a {
-	width: 9.5em;
+	width: 165px;
 }
 
 nav a:before {
@@ -370,11 +370,11 @@ footer p {
 	}
 
 	nav .mail.active a {
-		width: 6.5em;
+		width: 125px;
 	}
 
 	nav .phone.active a {
-		width: 4em;
+		width: 75px;
 	}
 
 	footer {
