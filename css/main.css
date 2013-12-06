@@ -145,6 +145,7 @@ nav {
 }
 
 nav h2 {
+	display: none;
 	float: left;
 	margin: 0;
 	padding: 0 10px 0 0;
@@ -356,10 +357,6 @@ footer p {
 		color: #001337;
 		background: #fff;
 		box-shadow: 0 10px 20px #fff;
-	}
-
-	nav h2 {
-		display: none;
 	}
 
 	nav ul {
