@@ -1,10 +1,9 @@
 /**
  * ES Script
  *
- * @author     Marc Görtz <mgoertz@es-enterprise-solutions.de>
- * @copyright  Copyright (c) 2011-2013 ES Enterprise Solutions GmbH <info@es-enterprise-solutions.de>
- * @license    MIT License
- * @media      all
+ * @author    Marc Görtz <mgoertz@es-enterprise-solutions.de>
+ * @copyright Copyright (c) 2011-2013 ES Enterprise Solutions GmbH <info@es-enterprise-solutions.de>
+ * @license   MIT License
  */
 
 window.__ES = window.__ES || {};
