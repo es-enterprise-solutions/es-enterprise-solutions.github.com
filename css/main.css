@@ -11,6 +11,7 @@ html {
 	color: #fff;
 	background: #001337;
 	font: 21px/30px 'ff-tisa-sans-web-pro', sans-serif;
+	overflow-y: scroll;
 }
 
 body {
