@@ -6,51 +6,84 @@
  * @license   MIT License
  */
 
-window.__ES = window.__ES || {};
-
-window.__ES.ContactToggle = (function(window, document, undefined) {
+(function(window, document, undefined) {
 
 	'use strict';
 
-	var _toggleIcons,
+	var _getStyle,
+		_toggleIcons,
 		_changeNavText,
-		_detectResize;
+		_detectResize,
+		_navigation = document.getElementsByTagName('nav')[0];
 
-	_toggleIcons = function() {
-		$('nav i').each(function() {
-			$(this).on('click', function(evt) {
-				$(this).parent().siblings().removeClass('active');
-				$(this).parent().toggleClass('active');
-			});
-		});
+	// [].forEach polyfill
+	if (!Array.prototype.forEach) {
+		Array.prototype.forEach = function(fn, scope) {
+			var i, len;
+			for (i = 0, len = this.length; i < len; ++i) {
+				if (i in this) {
+					fn.call(scope, this[i], i, this);
+				}
+			}
+		};
+	}
+
+	// getComputedStyle() for all browsers
+	_getStyle = function(elm, prop) {
+		return elm.currentStyle ?
+			elm.currentStyle[prop] : // IE
+			document.defaultView.getComputedStyle(elm, '')[prop];
 	};
 
+	// toggle contact content on icon click
+	_toggleIcons = function() {
+		[].forEach.call(
+			_navigation.querySelectorAll('i'),
+			function(icon) {
+				icon.addEventListener('click', function() {
+					var current  = this.parentNode,
+						siblings = current.parentNode.childNodes;
+					for (var i = 0; i < siblings.length; i++) {
+						if (siblings[i].nodeType === 1 && siblings[i] !== current) {
+							siblings[i].className = siblings[i].className.replace(/(\s*)active(\s*)/g, '');
+						}
+					}
+					if (current.className.indexOf('active') !== -1) {
+						current.className = current.className.replace(/(\s*)active(\s*)/g, '');
+					} else {
+						current.className += ' active';
+					}
+				}, false);
+			}
+		);
+	};
+
+	// change contact content depending on style
 	_changeNavText = function() {
-		if ($('nav').css('text-align') === 'center') {
-			$('nav .mail a').attr('data-text', $('nav .mail a').text());
-			$('nav .mail a').text('E-Mail senden');
-			$('nav .phone a').attr('data-text', $('nav .phone a').text());
-			$('nav .phone a').text('Anrufen');
-		} else if ($('nav .mail a').attr('data-text') !== undefined) {
-			$('nav .mail a').text($('nav .mail a').attr('data-text'));
-			$('nav .phone a').text($('nav .phone a').attr('data-text'));
+		var mailLink  = _navigation.querySelector('.mail a'),
+			phoneLink = _navigation.querySelector('.phone a');
+		if (_getStyle(_navigation, 'text-align') === 'center') {
+			mailLink.setAttribute('data-text', mailLink.innerHTML);
+			mailLink.innerHTML = 'E-Mail senden';
+			phoneLink.setAttribute('data-text', phoneLink.innerHTML);
+			phoneLink.innerHTML = 'Anrufen';
+		} else if (mailLink.getAttribute('data-text') !== null) {
+			mailLink.innerHTML = mailLink.getAttribute('data-text');
+			mailLink.removeAttribute('data-text');
+			phoneLink.innerHTML = phoneLink.getAttribute('data-text');
+			phoneLink.removeAttribute('data-text');
 		}
 	};
 
+	// detect window resize
 	_detectResize = function() {
 		_changeNavText();
-		$(window).on('resize', function() {
+		window.addEventListener('resize', function() {
 			_changeNavText();
-		});
+		}, false);
 	};
 
-	return {
-		init: function() {
-			_toggleIcons();
-			_detectResize();
-		}
-	};
+	_toggleIcons();
+	_detectResize();
 
 })(window, document);
-
-window.__ES.ContactToggle.init();
