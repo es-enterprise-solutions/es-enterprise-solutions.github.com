@@ -31,8 +31,8 @@
 	// getComputedStyle() for all browsers
 	_getStyle = function(elm, prop) {
 		return elm.currentStyle ?
-			elm.currentStyle[prop] : // IE
-			document.defaultView.getComputedStyle(elm, '')[prop];
+			elm.currentStyle[prop] : // IE8
+			window.getComputedStyle(elm, '').getPropertyValue(prop);
 	};
 
 	// toggle contact content on icon click
@@ -61,12 +61,16 @@
 	// change contact content depending on style
 	_changeNavText = function() {
 		var mailLink  = _navigation.querySelector('.mail a'),
-			phoneLink = _navigation.querySelector('.phone a');
+			phoneLink = _navigation.querySelector('.phone a'),
+			labels    = {
+				mailLink:  'E-Mail senden',
+				phoneLink: 'Anrufen'
+			};
 		if (_getStyle(_navigation, 'text-align') === 'center') {
 			mailLink.setAttribute('data-text', mailLink.innerHTML);
-			mailLink.innerHTML = 'E-Mail senden';
+			mailLink.innerHTML = labels.mailLink;
 			phoneLink.setAttribute('data-text', phoneLink.innerHTML);
-			phoneLink.innerHTML = 'Anrufen';
+			phoneLink.innerHTML = labels.phoneLink;
 		} else if (mailLink.getAttribute('data-text') !== null) {
 			mailLink.innerHTML = mailLink.getAttribute('data-text');
 			mailLink.removeAttribute('data-text');
